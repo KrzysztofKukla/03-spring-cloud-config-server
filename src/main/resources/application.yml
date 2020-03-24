@@ -9,3 +9,10 @@ spring:
       server:
         git:
           uri: file:///C:/Users/Krzysztof/Documents/InteliiJProjects/learning/in28minutes/microservices/git-localconfig-repo
+
+#enable all actuator URLs from Spring Boot 2.0.0, turns off security on spring boot actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

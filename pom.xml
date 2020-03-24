@@ -25,6 +25,14 @@
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
+		<!-- Spring Cloud Bus provides refreshing configuration for all instances of microservice changed on Git in Spring Cloud Config-->
+		<!-- in this case we use RabbitMq, but can be other as well like Kafka etc -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
+		<!-- trigger autobuilding project after changes in code -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
